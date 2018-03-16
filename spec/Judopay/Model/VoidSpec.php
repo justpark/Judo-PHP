@@ -2,7 +2,7 @@
 
 namespace spec\Judopay\Model;
 
-use Tests\Builders\VoidBuilder;
+use Tests\Builders\VoidTransactionBuilder;
 
 class VoidSpec extends ModelObjectBehavior
 {
@@ -17,7 +17,7 @@ class VoidSpec extends ModelObjectBehavior
             $this->concoctRequest('transactions/void.json')
         );
 
-        $modelBuilder = new VoidBuilder();
+        $modelBuilder = new VoidTransactionBuilder();
         /** @var \Judopay\Model\VoidTransaction|VoidSpec $this */
         $this->setAttributeValues(
             $modelBuilder->compile()->getAttributeValues()
